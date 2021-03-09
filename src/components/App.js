@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import axios from 'axios';
+import '../css/footer.css';
+import '../css/gridview.css';
 
 
 import PageTabs from './Pagetabs';
@@ -20,7 +22,7 @@ class App extends React.Component {
   }
 
   getData() {
-      axios.get(`http://my-json-server.typicode.com/bnissen24/project2DB/posts`)
+      axios.get(`https://my-json-server.typicode.com/bnissen24/project2DB/posts`)
           .then(response => {
               this.setState({ allTasks: response.data, sortedTasks: this.sortTasks(response.data) });
           }).catch (error => {
@@ -76,7 +78,20 @@ class App extends React.Component {
             <div className="container">
                 <PageTabs currentView={view}
                           onViewChange={this.onViewChange.bind(this)}/>
+
+
+
                 {jsx}
+
+                <footer>
+                    <div className="fotter">
+                        <div>Anjali Kumari</div>
+                        <div>(732)-797-8419</div>
+                        <div>ak2254@njit.edu</div>
+
+
+                    </div>
+                </footer>
             </div>
         );
     }
@@ -86,7 +101,10 @@ class App extends React.Component {
     const { view } = this.state;
 
     switch (view) {
-      case 'grid':
+
+
+
+
         case 'grid':
             return (this.wrapPage(
                 <GridView tasks={this.state.sortedTasks} onUpdateTask={(task)=> this.onUpdateTask(task)} />
@@ -109,6 +127,11 @@ class App extends React.Component {
     }
 
   }
+
+
+
+
+
 }
 
 export default App;

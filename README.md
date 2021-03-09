@@ -1,3 +1,18 @@
+<h1>TASK BOARD PROJECT</h1>
+
+<h3>Languages used: HTML/CSS and React JS
+
+<p> This is a simple project management application with a basic set of features
+    INCLUDING:<br>
+    A board view where the user can view all of the tasks in columns relating to their status
+    A list view to view and filter all tasks at once
+    an add form to be able to add new tasks to the project.
+    </p>
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

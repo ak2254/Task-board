@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 
-
+import '../css/gridview.css';
 import GridCard from './GridCard';
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Container'
@@ -9,6 +9,8 @@ import Row from 'react-bootstrap/Container'
 const COLUMN_NAMES = ['todo', 'in-progress', 'review', 'done'];
 
 class GridView extends React.Component {
+
+
 
   constructor(props) {
     super(props);
@@ -81,7 +83,10 @@ class GridView extends React.Component {
 
     return(
 
-    <Container style={{display: 'flex', flexDirection: 'row'}}>
+
+
+    <div class="grid">
+
       <Row  style={{  width: '100%',
         padding: '15px',
         border: '2px solid white',
@@ -92,7 +97,7 @@ class GridView extends React.Component {
       <Row style={{  width: '100%',
         padding: '15px',
         border: '2px solid white',
-        background: 'linear-gradient(292deg,#e00e1f,#dd152d 47%,#750d42)',
+        background: '#B66731',
         color: 'black'}}>
         <h3>In Progress</h3>
         { inProgressCards}
@@ -105,14 +110,15 @@ class GridView extends React.Component {
         { reviewCards}
       </Row>
       <Row style={{  width: '100%',
-        background: 'linear-gradient(292deg,#e00e1f,#dd152d 47%,#750d42)',
+        background: '#B66731',
         padding: '15px',
         border: '2px solid white',
         color: 'black'}}>
         <h3>Done</h3>
         { doneCards}
       </Row>
-    </Container>
+    </div>
+
     );
 
 

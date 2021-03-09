@@ -5,13 +5,19 @@ import Card from 'react-bootstrap/Card'
 const renderButton = (taskId, column, btnText, callbackFn) => {
     if (btnText && callbackFn) {
         return (
+
             <div>
                 <a href="#"
                    className="card-link"
                    onClick={onCardAction(taskId, column, callbackFn)}>
                     { btnText }
-                </a>
-            </div>
+            </a>
+
+
+    </div>
+
+
+
         );
     } else {
         return <span />;
@@ -36,7 +42,8 @@ const GridCard = props => {
               <Card.Text>
                   Type: {props.type }
               </Card.Text>
-              { renderButton(props.id, props.column, props.prevTxt, props.onPrevClick) }
+
+                  { renderButton (props.id, props.column, props.prevTxt, props.onPrevClick) }
               { renderButton(props.id, props.column, props.nextTxt, props.onNextClick) }
 
 

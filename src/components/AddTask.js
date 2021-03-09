@@ -18,7 +18,7 @@ class AddTask extends React.Component {
 
     render() {
         return (
-            <div className="add-task-form">
+            <div className="add-task-form" style={{marginBottom:'50vh'}}>
                 <h3>Add Task</h3>
                 <form onSubmit={this.onSubmit.bind(this)}>
                     <div className="form-group add-task-form__form-group">
@@ -42,7 +42,12 @@ class AddTask extends React.Component {
                         </select>
                     </div>
 
-                    <input type="submit" className="btn btn-success" value="Add Task" />
+                    <input style={
+                        {
+
+                            background: '#f81894 !important;',
+
+                        }} type="submit" className="btn btn-success" value="Add Task" />
                 </form>
             </div>
         );

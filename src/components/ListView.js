@@ -80,7 +80,7 @@ class ListView extends React.Component{
                              onStatusChange={this.onStatusChange.bind(this)}
                              onTypeChange={this.onTypeChange.bind(this)} />
 
-                <h1 style={{ textAlign: 'center', color:'#c00'}} > List View</h1>
+                <h1 style={{ textAlign: 'center', color:'black'}} > List View</h1>
 
                 <Table striped bordered hover >
 
